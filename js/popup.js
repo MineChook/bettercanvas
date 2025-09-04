@@ -2176,3 +2176,14 @@ async function sendFromPopup(message, options = {}) {
 
     return await response;
 }
+
+
+function checkUpdates(version: String): Boolean {
+    let latestManifest = JSON(fetch("https://github.com/UseBetterCanvas/bettercanvas/blob/main/manifest.json"))
+
+    let latestVersion = latestManifest.get("version")
+
+    if (version != latestVersion) {
+        
+    }
+}
